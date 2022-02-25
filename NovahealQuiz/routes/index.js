@@ -10,5 +10,12 @@ router.get('/', (req, res) => {
 })
 
 
+router.get('/game', (req, res) => {
+  res.json({
+    confirmation: 'success'
+  })
+})
+
+
 
 module.exports = router
