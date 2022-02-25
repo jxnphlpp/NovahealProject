@@ -31,4 +31,9 @@ const api = require('./routes/api') // sample API Routes
 app.use('/', index)
 app.use('/api', api) // sample API Routes
 
+app.get('/game', function (req, res,html) {
+  res.sendFile(path.join(__dirname+'/game.html'));
+ });
+
+
 module.exports = app
