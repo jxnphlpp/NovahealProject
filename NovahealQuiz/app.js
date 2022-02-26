@@ -4,6 +4,9 @@ const express = require('express')
 
 const app = express() // initialize app
 
+// damit Links gerendert werden
+app.use(express.static(__dirname));
+
 /*  Apps are configured with settings as shown in the conig object below.
     Options include setting views directory, static assets directory,
     and database settings. Default config settings can be seen here:
@@ -31,9 +34,13 @@ const api = require('./routes/api') // sample API Routes
 app.use('/', index)
 app.use('/api', api) // sample API Routes
 
+
+/*
 app.get('/game', function (req, res,html) {
   res.sendFile(path.join(__dirname+'/game.html'));
  });
+
+ */
 
 
 module.exports = app
